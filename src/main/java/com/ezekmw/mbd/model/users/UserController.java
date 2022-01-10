@@ -1,6 +1,6 @@
 package com.ezekmw.mbd.model.users;
 
-import com.ezekmw.mbd.model.users.student.Service;
+import com.ezekmw.mbd.model.users.student.StudentService;
 import com.ezekmw.mbd.model.users.student.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class Controller {
+public class UserController {
 
-    private final Service service;
+    private final StudentService service;
     @Autowired
-    public Controller(Service service) {
+    public UserController(StudentService service) {
         this.service = service;
     }
     @RequestMapping(value = "/student",method = RequestMethod.GET)
