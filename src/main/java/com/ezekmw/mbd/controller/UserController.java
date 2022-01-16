@@ -3,10 +3,7 @@ package com.ezekmw.mbd.controller;
 import com.ezekmw.mbd.model.users.student.Student;
 import com.ezekmw.mbd.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,6 +23,15 @@ public class UserController{
     @RequestMapping(value = "/student",method = RequestMethod.POST)
     public void registerStudent(@RequestBody Student student){
         service.createStudent(student);
+    }
+
+    @PutMapping(path = "/student/modified/{id}")
+    public void updateStudent(@PathVariable("id") @RequestBody Long id,
+                              @RequestParam(required = false) String firstName,
+                              @RequestParam(required = false) String lastName,
+                              @RequestParam(required = false) String email){
+        service.updateStudent(id, firstName,lastName,email);
+
     }
 
 }
