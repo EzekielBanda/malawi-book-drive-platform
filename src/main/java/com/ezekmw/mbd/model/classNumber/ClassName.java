@@ -25,31 +25,31 @@ public class ClassName {
 //    @OneToMany(cascade = CascadeType.ALL, mappedBy = "className",fetch = FetchType.EAGER)
 //    private List<Student> studentList = new ArrayList<>();
     //public ClassName(){}
-    @OneToMany
-    @JoinColumn(name = "student_id")
-    private Set<Student> studentList;
+//    @OneToMany
+//    @JoinColumn(name = "student_id")
+//    private Set<Student> studentList;
 
-    public Long getClassNameId() {
-        return classNameId;
-    }
-
-    public void setClassNameId(Long classNameId) {
-        this.classNameId = classNameId;
-    }
-
-    public String getClassName() {
-        return className;
-    }
-
-    public void setClassName(String className) {
-        this.className = className;
-    }
-
-    public Set<Student> getStudentList() {
-        return studentList;
-    }
-
-    public void setStudentList(Set<Student> studentList) {
-        this.studentList = studentList;
-    }
+//    public Long getClassNameId() {
+//        return classNameId;
+//    }
+//
+//    public void setClassNameId(Long classNameId) {
+//        this.classNameId = classNameId;
+//    }
+//
+//    public String getClassName() {
+//        return className;
+//    }
+//
+//    public void setClassName(String className) {
+//        this.className = className;
+//    }
+//
+//    public Set<Student> getStudentList() {
+//        return studentList;
+//    }
+//
+//    public void setStudentList(Set<Student> studentList) {
+//        this.studentList = studentList;
+//    }
 }
