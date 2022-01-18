@@ -32,10 +32,7 @@ public class Student {
     private String firstName;
     @Column(name = "last_name", nullable = false)
     private String lastName;
-    @Column(name = "gender",nullable = false)
-    private String gender;
-    @Column(name = "date_of_birth",nullable = false)
-    private LocalDate dob;
+    private String userName;
     @Column(name = "email",nullable = false)
     private String emailAddress;
     @Column(name = "phone_number")
@@ -44,26 +41,18 @@ public class Student {
     private String password;
 
 
-    @ManyToOne
-    @JoinColumn(name = "class_name_id")
-    private ClassName className;
+//    @ManyToOne
+//    @JoinColumn(name = "class_name_id")
+//    private ClassName className;
 
-    public Student(String firstName, String lastName, String gender, LocalDate dob, String emailAddress, String phoneNumber, String password) {
+    public Student(String firstName, String lastName, String userName, String emailAddress, String phoneNumber, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.gender = gender;
-        this.dob = dob;
+        this.userName = userName;
         this.emailAddress = emailAddress;
         this.phoneNumber = phoneNumber;
         this.password = password;
 
-    }
-    public ClassName getClassName() {
-        return className;
-    }
-
-    public void setClassName(ClassName className) {
-        this.className = className;
     }
 
 }
